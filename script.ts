@@ -15,15 +15,16 @@ const prisma = new PrismaClient()
 
 // app.listen(3000, () => console.log('Server is running'));
 
-async function createUser(user: Prisma.UserCreateInput) {
-    const newUser = await prisma.user.create({ data: user });
-    return newUser;
-}
+// async function createUser(user: Prisma.UserCreateInput) {
+//     // const newUser = await prisma.user.create({ data: user });
+//     // return newUser;
+// }
 
 async function main() {
-    const userInfo = {name:"raju"}
-    const user = await createUser(userInfo)
-    console.log(user)
+    // const userInfo = {name:"raju"}
+    // const user = await createUser(userInfo)
+    // console.log(user)
+    console.log('hello')
 }
 
 main()
