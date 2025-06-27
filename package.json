@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon",
-    "dev": "node --loader ts-node/esm ./script.ts"
+    "dev": "node --loader ts-node/esm ./script.ts",
+    "devStart": "nodemon --exec \"node --loader ts-node/esm\" script.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
+    "dotenv": "^16.6.1",
     "express": "^5.1.0",
     "morgan": "^1.10.0",
     "ts-node": "^10.9.2"
