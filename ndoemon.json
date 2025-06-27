@@ -1,5 +1,6 @@
 {
-    "watch":["."],
-    "ext":".ts",
-    "exec":"node --loader ts-node/esm ./script.ts"
+  "watch": ["."],
+  "ext": "ts,json",
+  "ignore": ["node_modules"],
+  "exec": "node --loader ts-node/esm ./script.ts"
 }
