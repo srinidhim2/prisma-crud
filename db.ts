@@ -1,4 +1,5 @@
 import { PrismaClient, Prisma} from '@prisma/client';
+import { emit } from 'process';
 export const prisma = new PrismaClient()
 
 
@@ -32,5 +33,16 @@ export const getAllUsers = async ()=>{
         userPreference:true
     }})
     return users
+}
 
+export const udpateUser = async(email:any,user:any)=>{
+    const updatedUser = await prisma.user.update({where:{email:email},data:{name:user.name,age:user.age}})
+    return updatedUser
+}
+
+export const deleteUser = async (email:string)=>{
+    const deletedUser = await prisma.user.delete({where:{
+        email:email
+    }})
+    return deleteUser
 }
